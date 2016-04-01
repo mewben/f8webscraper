@@ -1,12 +1,12 @@
 {
-  "name": "mlm-member-client",
+  "name": "f8webscraper-client",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
     "build:webpack": "cross-env NODE_ENV=production webpack --display-modules --config webpack.config.prod.js",
-    "build": "gulp build && npm run build:webpack && cp -R build/* ../public/build && cp -R assets/img/* ../public/assets/img",
+    "build": "gulp build && npm run build:webpack && cp -R build/* ../public/build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Melvin Soldia <melvinsoldia@gmail.com> (http://twitter.com/soldio)",

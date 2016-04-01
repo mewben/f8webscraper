@@ -1,5 +1,8 @@
 // Nav Overrides
-.nav {
+.nav-link.active {
+	color: #fff;
+}
+/*.nav {
 	margin-bottom: 25px;
 }
 .nav-link {
@@ -32,7 +35,7 @@
 	margin-top: 0 !important;
 }
 
-
+*/
 .form-control {
 	border-width: 2px;
 	//border: 2px solid lighten($blue-custom, 30%);

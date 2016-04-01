@@ -44,6 +44,7 @@ func main() {
 
 	site := controllers.SiteController{}
 	e.Post("/process", site.Process())
+	e.Post("/nerdy", site.Nerdy())
 
 	e.Run(standard.New(config.Port))
 }

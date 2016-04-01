@@ -1,9 +1,11 @@
 package models
 
 import (
+	"encoding/json"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"regexp"
 	"strings"
 
@@ -11,6 +13,61 @@ import (
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
 )
+
+type Site struct {
+	Name string `json:"site"`
+}
+
+type Data struct {
+	Sites []Site `json:"sites"`
+	//Total int
+}
+
+type Results struct {
+	Data Data
+}
+
+type Result struct {
+	//Request json.RawMessage
+	Results Results
+}
+
+func Nerdy(query, apikey string) (response string, err error) {
+	//query = "_pop.push(['siteId', 1966])"
+	//apikey = "3494295cca774568004dc9dd5d6b916f"
+
+	q, err := url.Parse(query)
+	query = q.String()
+	var url = "https://nerdyapi.com/v2/code/search?andCode%5B%5D=" + query + "&api_key=" + apikey + "&count=10&offset=0&raw=true&year=2016"
+
+	resp, err := http.Get(url)
+	if err != nil {
+		return
+	}
+
+	defer resp.Body.Close()
+
+	/*result, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return
+	}
+
+	log.Println(string(result))*/
+
+	decoder := json.NewDecoder(resp.Body)
+	var res Result
+	err = decoder.Decode(&res)
+
+	if err != nil {
+		return
+	}
+
+	for _, v := range res.Results.Data.Sites {
+		response += v.Name + " "
+	}
+
+	return
+}
 
 func crawl2(url string, r *regexp.Regexp) (response string, err error) {
 

@@ -4,6 +4,7 @@ import 'isomorphic-fetch';
 import acc from 'accounting';
 
 import saveAs from '../utils/saveAs';
+import { HOST } from 'config';
 
 class ProcessForm extends Component {
 
@@ -61,8 +62,9 @@ class ProcessForm extends Component {
 			meta: this.state.meta.merge(fromJS(meta))
 		});
 
+		let resource = HOST + '/process';
 		im_urls.map((v, i) => {
-			fetch('/process', {
+			fetch(resource, {
 				method: 'post',
 				headers: new Headers({
 					'Accept': 'application/json',
@@ -200,7 +202,7 @@ class ProcessForm extends Component {
 		}
 		return (
 			<div>
-				<h4>Processing {meta.get('completed')}/{meta.get('total')} =======> Found {meta.get('found')}.</h4>
+				<h4>Processing {completed}/{total} =======> Found {meta.get('found')}.</h4>
 				<progress className="progress progress-info" value={perc} max="100"></progress>
 			</div>
 		);
@@ -216,7 +218,7 @@ class ProcessForm extends Component {
 				</div>
 				<div className="form-group">
 					<label>URLs (1 each line)</label>
-					<textarea ref="urls" rows={15} className="form-control"></textarea>
+					<textarea ref="urls" rows={15} className="form-control" />
 				</div>
 				<button type="submit" className="btn btn-info">Process</button>
 			</form>
@@ -306,10 +308,10 @@ class ProcessForm extends Component {
 	render() {
 		return (
 			<div className="row">
-				<div className="col-sm-4">
+				<div className="col-md-4">
 					{this._renderForm()}
 				</div>
-				<div className="col-sm-8">
+				<div className="col-md-8">
 					{this._renderList()}
 				</div>
 			</div>

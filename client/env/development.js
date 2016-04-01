@@ -1,4 +1,4 @@
 module.exports = {
-	HOST: 'http://localhost:2100',
-	EP: 'http://localhost:2100/api'
+	HOST: 'http://localhost:1313',
+	EP: 'http://localhost:1313/api'
 };
