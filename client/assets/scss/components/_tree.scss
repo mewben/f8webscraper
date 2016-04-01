@@ -1,0 +1,40 @@
+.tree {
+	list-style: none;
+	padding-left: 20px;
+
+	.inline {
+		position: absolute;
+		top: -82px;
+		left: -110px;
+		z-index: -1;
+	}
+
+	.branch {
+		&.open {
+			> .leaf > svg {
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.leaf {
+		position: relative;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid $gray-lighter;
+
+		&.has_dr {
+			cursor: pointer;
+
+			&:hover {
+				background-color: lighten($brand-warning, 47%);
+			}
+		}
+
+		svg {
+			position: absolute;
+			top: 10px;
+			left: -20px;
+		}
+	}
+}

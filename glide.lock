@@ -1,0 +1,53 @@
+hash: 1db78804d3a01c21056641f3789dbdfcb5dbfdb35f9c64e4dfd13ea9e526f21c
+updated: 2016-04-01T13:55:46.37258557+08:00
+imports:
+- name: github.com/dchest/uniuri
+  version: 8902c56451e9b58ff940bbe5fec35d5f9c04584a
+- name: github.com/dgrijalva/jwt-go
+  version: b446e078d613dc395bf50b08884acbeafb19ce50
+- name: github.com/jmoiron/sqlx
+  version: 398dd5876282499cdfd4cb8ea0f31a672abe9495
+  subpackages:
+  - reflectx
+- name: github.com/labstack/echo
+  version: 11134134413a234260d4e9c501803c3cc6c874d1
+  subpackages:
+  - engine/standard
+  - middleware
+  - engine
+- name: github.com/labstack/gommon
+  version: f4ba73f8bcf88df1524069c117f7878cf530ee4e
+  subpackages:
+  - log
+  - color
+- name: github.com/lib/pq
+  version: 3cd0097429be7d611bb644ef85b42bfb102ceea4
+  subpackages:
+  - oid
+- name: github.com/mattn/go-colorable
+  version: 9cbef7c35391cca05f15f8181dc0b18bc9736dbb
+- name: github.com/mattn/go-isatty
+  version: 56b76bdf51f7708750eac80fa38b952bb9f32639
+- name: github.com/mewben/config-echo
+  version: bd68349f8624a3b42e21fd1ed87736bf6284c8b8
+- name: github.com/mewben/db-go-env
+  version: 6c872cf0330cd369d60a1c066df195d2669d17dd
+- name: github.com/rs/cors
+  version: 3ca2b550f6a4333b63c845850f760a7d00412cd6
+- name: github.com/rs/xhandler
+  version: d9d9599b6aaf6a058cb7b1f48291ded2cbd13390
+- name: github.com/valyala/fasttemplate
+  version: 3b874956e03f1636d171bda64b130f9135f42cff
+- name: github.com/yhat/scrape
+  version: 53e4de4d80edac458f4761a5eca90ea9b6272971
+- name: golang.org/x/net
+  version: 3e8a7b0329d536af18e227bb21b6da4d1dbbe180
+  subpackages:
+  - html
+  - html/atom
+  - context
+- name: golang.org/x/sys
+  version: 320cb01ddbbf0473674c2585f9b6e245721de355
+  subpackages:
+  - unix
+devImports: []

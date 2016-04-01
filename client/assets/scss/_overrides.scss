@@ -1,0 +1,175 @@
+// Nav Overrides
+.nav {
+	margin-bottom: 25px;
+}
+.nav-link {
+	font-size: 14px;
+	color: #fff; //  #a8acb1; // #fff; // $gray-lighter;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+
+	svg {
+		color: #a8acb1; //$blue-dark;
+		margin-top: -3px;
+		margin-right: 5px;
+	}
+}
+
+.nav-link.active {
+	background-color: $brand-info !important; //lighten($blue-custom, 0%) !important;
+	svg {
+		color: #fff;
+	}
+}
+
+.nav-link:hover,
+.nav-link:focus {
+	background-color: rgba(0, 0, 0, 0.2); // lighten($blue-custom, 5%);
+	color: $gray-lighter;
+}
+
+.nav-item + .nav-item {
+	margin-top: 0 !important;
+}
+
+
+.form-control {
+	border-width: 2px;
+	//border: 2px solid lighten($blue-custom, 30%);
+	//border: 1px solid lighten($gray, 10%);
+	//border-radius: 0;
+	color: $brand-primary;
+	font-size: 14px;
+
+	/*+ .form-control {
+		margin-top: -1px;
+	}*/
+
+	&:focus {
+		//border: 1px solid $blue-custom;
+		//box-shadow: 0 0 0 1px lighten($blue-custom, 15%);
+	}
+}
+
+.form-group {
+	label {
+		margin-bottom: 0;
+		text-align: left;
+		font-weight: 700;
+		/*text-transform: uppercase;
+		font-size: 12px;
+		color: $gray;*/
+	}
+	.text-muted {
+		font-size: 11px;
+	}
+	.checkbox label {
+		text-align: left;
+		font-weight: 400;
+	}
+
+}
+
+.btn {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 13px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.btn.btn-sm {
+	font-size: 11px;
+	padding: 3px 5px;
+}
+
+.btn.btn-lg {
+	padding: 14px 18px;
+}
+
+.btn-link {
+	letter-spacing: 0;
+}
+
+.table {
+	th {
+		text-transform: uppercase;
+		font-size: 12px;
+		border-top: none;
+		color: #000;
+	}
+
+	td {
+		a.block {
+			display: block;
+		}
+		.btn-link {
+			padding: 0 5px;
+		}
+		.block.btn-link {
+			padding: 0;
+		}
+	}
+
+	.right {
+		text-align: right;
+	}
+}
+
+.table.no-border {
+	th, td {
+		border: none;
+	}
+}
+
+.page-link {
+	background-color: $gray;
+	border: 1px solid $gray-dark;
+	color: #fff;
+
+	&:hover {
+		background-color: $gray-dark;
+		border: 1px solid $gray-dark;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+.list-group {
+	font-size: 14px;
+}
+
+// react-selectize
+.react-selectize {
+	font-family: $font-family-sans-serif;
+
+	.control {
+		border: 2px solid $input-border-color;
+		font-size: 14px;
+
+		input {
+			padding: 3px 0px;
+		}
+		.placeholder {
+			color: $input-color-placeholder;
+		}
+	}
+
+	&.open {
+		.control {
+			border-color: $brand-primary;
+		}
+	}
+
+	.dropdown-transition .dropdown {
+		border: 2px solid $input-border-color;
+		font-size: 14px;
+	}
+}
+.react-selectize.simple-select:not(.open) {
+	background-image: none;
+	background-color: #FFF;
+}
+.react-selectize:not(.flipped).open .dropdown {
+	border-color: $brand-primary;
+}

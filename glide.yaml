@@ -1,0 +1,17 @@
+package: projects/f8webscraper
+import:
+- package: github.com/dchest/uniuri
+- package: github.com/dgrijalva/jwt-go
+- package: github.com/labstack/echo
+  subpackages:
+  - engine/standard
+  - middleware
+- package: github.com/lib/pq
+- package: github.com/mewben/config-echo
+- package: github.com/mewben/db-go-env
+- package: github.com/rs/cors
+- package: github.com/yhat/scrape
+- package: golang.org/x/net
+  subpackages:
+  - html
+  - html/atom

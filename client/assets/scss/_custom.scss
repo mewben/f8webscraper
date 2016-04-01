@@ -1,0 +1,68 @@
+a,
+input,
+button {
+	transition: all 0.3s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+body {
+	//background-color: lighten($gray, 33%);
+	color: $brand-primary;
+	padding-top: 70px;
+}
+
+svg {
+	margin-top: -3px;
+}
+
+.pd-tb {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.pd-t {
+	padding-top: 25px;
+}
+.error,
+.required {
+	color: $brand-danger;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.scrollable {
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.input-icon {
+	position: relative;
+	svg {
+		position: absolute;
+		color: rgba(0,0,0,0.3);
+		top: 9px;
+		left: 9px;
+	}
+	.form-control {
+		padding-left: 40px;
+	}
+}
+
+.card {
+	box-shadow: 1px 1px 0 rgba(0,0,0,0.03);
+}
+
+.toolbar {
+	margin-bottom: 20px;
+}
+
+.cap {
+	text-transform: capitalize;
+}
+
+.strong {
+	font-weight: 700;
+}

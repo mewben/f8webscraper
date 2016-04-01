@@ -1,0 +1,103 @@
+#sidenav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 220px;
+	background-color: $brand-primary;
+	border-right: 1px solid #000;
+	color: $gray-lighter;
+	transition: transform 0.1s cubic-bezier(0.1, 0.7, 0.1, 1);
+	transform: translate3d(-220px, 0, 0);
+	z-index: 500;
+
+	.company {
+		height: 52px;
+		line-height: 52px;
+		padding: 0 20px;
+		background-color: rgba(0,0,0,0.2);
+		box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+		//padding-left: 15px;
+		//border-bottom: 1px solid $blue;
+
+		.logo {
+			font-size: 24px;
+			line-height: 52px;
+			color: #fff;
+			//margin-top: 10px;
+		}
+	}
+
+	.media-body {
+		vertical-align: middle;
+		svg {
+			color: $brand-success;
+		}
+	}
+
+	.circle {
+		height: 30px;
+		width: 30px;
+		text-align: center;
+		line-height: 28px;
+		margin: 7px 5px 7px;
+		border-radius: 50%;
+		background-color: $brand-info;
+	}
+
+	.detail {
+		font-size: 12px;
+	}
+
+	.media-heading {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+
+	.scrollable {
+		padding-top: 15px;
+		padding-right: 15px;
+		padding-bottom: 65%;
+	}
+
+	.profile {
+		padding: 10px 15px;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+		//background-color: $blue-dark;
+	}
+
+	h5 {
+		font-size: 11px;
+		letter-spacing: 2px;
+		color: $gray;
+		margin-top: 15px;
+		padding-left: 15px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	#sidenav {
+		transform: translateX(0);
+	}
+	main {
+		margin-left: 220px;
+	}
+}
+
+.navOpen {
+	#sidenav {
+		transform: translateX(0);
+	}
+
+	.content-cover {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 900;
+		background-color: rgba(0,0,0,0.1);
+		transform: translate3d(220px, 0px, 0px);
+	}
+}

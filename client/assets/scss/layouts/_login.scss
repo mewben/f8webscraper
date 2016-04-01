@@ -1,0 +1,93 @@
+#login {
+
+	a {
+		line-height: 50px;
+		color: #fff;
+		font-size: 14px;
+		border-bottom: 1px dotted #fff;
+
+		&:hover {
+			border-bottom: 1px solid #fff;
+			text-decoration: none;
+		}
+	}
+
+	.bg {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#476082+0,2c3e50+100 */
+		//background: #476082; /* Old browsers */
+		//background: -moz-linear-gradient(top,  #476082 0%, #2c3e50 100%); /* FF3.6-15 */
+		//background: -webkit-linear-gradient(top,  #476082 0%,#2c3e50 100%); /* Chrome10-25,Safari5.1-6 */
+		//background: linear-gradient(to bottom,  #476082 0%,#2c3e50 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#476082', endColorstr='#2c3e50',GradientType=0 ); /* IE6-9 */
+
+
+		background: url(/assets/img/road.jpg) no-repeat center center fixed #444;
+		background-size: cover;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+	}
+
+	.co {
+		text-align: center;
+		color: #fff;
+		margin-bottom: 15px;
+		
+		.logotext {
+			font-size: 11px;
+			letter-spacing: 5px;
+			font-weight: 700;
+			margin-top: 10px;
+			margin-left: 30px;
+			font-family: $font-family-serif;
+			color: #fff;
+		}
+
+		.lead {
+			border-top: 2px solid rgba(255, 255, 255, 0.1);
+			margin-top: 30px;
+		}
+
+		h1 {
+			font-size: 58px;
+			line-height: 97px;
+			font-weight: 700;
+			font-family: $font-family-serif;
+			margin: auto;
+			text-align: center;
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			background-color: $brand-success;
+			border: 5px solid #fff;
+			margin-bottom: 5px;
+		}
+	}
+
+	.container {
+		max-width: 720px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-53%);
+	}
+
+	form {
+		max-width: 300px;
+		background-color: rgba(255, 255, 255, 1);
+		border-radius: $border-radius;
+		padding: 32px;
+		margin: 0 auto;
+	}
+
+	footer {
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		bottom: 0;
+		padding: 8px;
+		font-size: 12px;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: $gray-light;
+	}
+}

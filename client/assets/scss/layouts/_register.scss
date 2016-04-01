@@ -1,0 +1,63 @@
+#register {
+	padding-bottom: 150px;
+
+	a {
+		color: $brand-info;
+		text-decoration: underline;
+	}
+	header {
+		padding: 30px;
+		//min-height: 220px;
+		
+		.logotext {
+			font-size: 11px;
+			letter-spacing: 5px;
+			font-weight: 700;
+			margin-top: 10px;
+			margin-left: 36px;
+			font-family: $font-family-serif;
+		}
+	}
+	.container {
+		margin-top: 20px;
+		max-width: 720px;
+	}
+
+	form {
+		padding: 20px;
+		padding-top: 0px;
+	}
+
+	h5 {
+		color: $brand-primary;
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 1px;
+		margin-top: 50px;
+		padding: 10px;
+		text-align: center;
+		border-bottom: 1px solid $gray-lighter;
+	}
+
+	footer {
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		bottom: 0;
+		padding: 8px;
+		font-size: 12px;
+		background-color: $gray-lighter;
+		color: $gray-light;
+	}
+}
+
+@include-breakpoint-up(sm) {
+	#register form {
+		padding: 80px;
+	}
+}
+
+.welcome {
+	max-width: 450px;
+	margin: 50px auto;
+}
