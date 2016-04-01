@@ -62,7 +62,7 @@ class ProcessForm extends Component {
 		});
 
 		im_urls.map((v, i) => {
-			fetch('http://localhost:1313/process', {
+			fetch('/process', {
 				method: 'post',
 				headers: new Headers({
 					'Accept': 'application/json',
